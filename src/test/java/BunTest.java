@@ -1,6 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
 import praktikum.Bun;
 
 import static org.junit.Assert.assertEquals;
@@ -15,14 +14,14 @@ public class BunTest {
         bun = new Bun(NAME_BUN, PRICE_BUN);
     }
 
+    // Проверка названия булочки
     @Test
-    @DisplayName("Проверка названия булочки")
     public void getNameBunPassed() {
         assertEquals("Неверное значение в поле name", bun.getName(), NAME_BUN);
     }
 
+    // Проверка цены булочки
     @Test
-   @DisplayName("Проверка цены булочки")
     public void getNamePricePassed() {
         assertEquals("Неверное значение в поле price", bun.getPrice(), PRICE_BUN, 0);
     }

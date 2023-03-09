@@ -1,6 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import praktikum.Ingredient;
@@ -41,19 +40,19 @@ public class IngredientTest {
     }
 
     @Test
-    @DisplayName("Проверка названия ингредиента")
+    // Проверка названия ингредиента
     public void getNameIngredientPassed() {
         assertEquals("Неверное значение в поле name", ingredient.getName(), nameIngredient);
     }
 
+    // Проверка типа ингредиента
     @Test
-    @DisplayName("Проверка типа ингредиента")
     public void getTypeIngredientPassed() {
         assertEquals("Неверное значение в поле type", ingredient.getType(), typeIngredient);
     }
 
+    // Проверка цены ингридиента
     @Test
-    @DisplayName("Проверка цены ингридиента")
     public void getPriceIngredient() {
         assertEquals("Неверное значение в поле price", ingredient.getPrice(), priceIngredient, 0);
     }

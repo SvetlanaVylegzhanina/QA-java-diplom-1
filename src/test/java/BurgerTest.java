@@ -1,6 +1,5 @@
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.Mockito;
@@ -35,16 +34,16 @@ public class BurgerTest {
         stellarBurger = new Burger();
     }
 
+    // Проверка добавления булочки
     @Test
-    @DisplayName("Проверка добавления булочки")
     public void setBunPassed() {
         stellarBurger.setBuns(bun);
 
         assertEquals("Неверное значение в поле bun", bun, stellarBurger.bun);
     }
 
+    // Проверка добавления ингредиентов
     @Test
-    @DisplayName("Проверка добавления ингредиентов")
     public void addIngredientPassed() {
         stellarBurger.addIngredient(ingredient1);
         stellarBurger.addIngredient(ingredient2);
@@ -52,8 +51,8 @@ public class BurgerTest {
         assertEquals("Неверное количество ингредиентов", 2, stellarBurger.ingredients.size());
     }
 
+    // Проверка удаления ингредиента
     @Test
-    @DisplayName("Проверка удаления ингредиента")
     public void removeIngredientPassed() {
         stellarBurger.addIngredient(ingredient1);
         stellarBurger.addIngredient(ingredient2);
@@ -62,8 +61,8 @@ public class BurgerTest {
         assertEquals("Неверное количество ингредиентов", 1, stellarBurger.ingredients.size());
     }
 
+    // Проверка перемещения ингредиента
     @Test
-    @DisplayName("Проверка перемещения ингредиента")
     public void moveIngredientPassed() {
         stellarBurger.addIngredient(ingredient1);
         stellarBurger.addIngredient(ingredient2);
@@ -72,8 +71,8 @@ public class BurgerTest {
         assertEquals("Неверная позиция ингредиента", ingredient2, stellarBurger.ingredients.get(0));
     }
 
+    // Проверка получения цены бургера
     @Test
-    @DisplayName("Проверка получения цены бургера")
     public void getPricePassed() {
         stellarBurger.setBuns(bun);
         stellarBurger.addIngredient(ingredient1);
@@ -88,8 +87,8 @@ public class BurgerTest {
         assertEquals("Неверная цена бургера", expectedResult, stellarBurger.getPrice(), 0);
     }
 
+    // Проверка печати чека с информацией о бургере
     @Test
-    @DisplayName("Проверка печати чека с информацией о бургере")
     public void getReceiptPassed() {
         stellarBurger.setBuns(bun);
         stellarBurger.addIngredient(ingredient1);
